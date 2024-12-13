@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #525561;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1100px;
+    min-height: 600px;
+    background-color: #272a37;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0,0.5);
+    margin: 30px;
+}
+
+.left-panel {
+    flex: 1;
+    background: url(img.png) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.header{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.back-button{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: transfrom 0.3s, background-color 0.3s ease;
+}
+.back-button:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.back-button i {
+    padding-left: 5px;
+}
+.tagline {
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.tagline h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination .dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    margin: 0 6px;
+    opacity: 0.5;
+}
+.pagination .dot.active {
+    opacity: 1;
+}
+
+.right-panel{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-container h2 {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.subtext {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    /* text-align: center; */
+    color: #a5a5b1;
+}
+.subtext a{
+    color: #1b98f5;
+    text-decoration: none;
+    font-weight: bold;
+}
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.form-row, .full-width{
+    flex-direction: column;
+}
+.form-field{
+    flex: 1;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #323644;
+    background: #323644;
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s ease ;
+}
+.form-field::placeholder{
+    color: #a5a5b1;
+}
+.form-field:focus{
+    outline: none;
+    border: 1px solid #1d90f5;
+}
+.password-field{
+    position: relative;
+}
+.password-field i{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #a5a5b1;
+    font-size: 18px;
+}
+.password-field i:hover{
+    color: #1d90f5;
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox-container input{
+    margin: 0;
+    cursor: pointer;
+}
+.checkbox-container label{
+    font-size: 14px;
+    color: #a5a5b1;
+}
+.checkbox-container label a{
+    color: #1d90f5;
+}
+.create-account-button{
+    width: 100%;
+    padding: 15px;
+    background: #1b98f5;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0,3s ease;
+}
+.create-account-button:hover{
+    background: #1282e4;
+    transform: scale(1.05);
+}
+
+.divide-container{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #a5a5b1;
+}
+.divide-line{
+    flex: 1;
+    height: 1px;
+    background-color: #7c7886;
+}
+.divide-text{
+    margin: 0 10px;
+}
+.social-button{
+    display: flex;
+    gap: 15px;
+}
+.social-button button {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0,3s ease;
+}
+.social-button button:hover{
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.social-button button i{
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+@media (max-width :768px){
+    .container{
+        flex-direction: column;
+        height: auto;
+        width: 80%;
+    }
+    .left-panel,.right-panel{
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 30px;
+
+    }
+    .form-row{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

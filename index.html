@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container">
+
+    <div class="left-panel">
+       <div class="header">
+          <h1 class="logo">YDH</h1>
+          <a href="#" class="back-button">Back to Website <i class="fas fa-arrow-right"></i></a>
+       </div>
+       <div class="tagline">
+           <h2>Join Us Today,<br> Start Your JOURNEY </h2>
+       </div>
+       <div class="pagination">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+       </div> 
+    </div>
+    <div class="right-panel">
+
+        <div class="from-container">
+            <h2>Create an account</h2>
+            <p class="subtext">Already have an acoount <a href="#">Log in</a></p>
+            <form action="">
+                <div class="from-row">
+                    <input type="text" placeholder="First Name" class="form-field">
+                    <input type="text" placeholder="Last Name" class="form-field">
+                </div>
+                <div class="from-row full-width ">
+                    <input type="email" placeholder="Email" class="form-field">
+                    <div class="password-field">
+                       <input type="password" placeholder="Enter your password" class="form-field" id="password">
+                       <i class="fas fa-eye-slash" id="toggle-password" onclick="togglePassword()"></i> 
+                    </div>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" name="" id="terms">
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" class="create-account-button">Create Account</button>
+
+                <div class="divide-container">
+                    <hr class="divide-line">
+                    <span class="divide-text">or register with</span>
+                    <hr class="divide-line">
+                </div>
+                <div class="social-button">
+                    <button class="google-button"><i class="fab fa-google"></i>GOOGLE</button>
+                    <button class="apple-button"><i class="fab fa-apple"></i>APPLE</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    function togglePassword() {
+        const passwordField = document.getElementById('password');
+        const toggleIcon = document.getElementById('toggle-password');
+
+        if(passwordField.type === 'password'){
+            passwordField.type = 'text';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }else {
+            passwordField.type = 'password';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        }
+    }
+</script>
+</body>
+</html>
